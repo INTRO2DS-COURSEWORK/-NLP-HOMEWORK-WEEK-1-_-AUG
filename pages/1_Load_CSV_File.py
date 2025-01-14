@@ -74,10 +74,13 @@ if uploaded_file is not None:
     params = {"df": df, "selected_column": selected_column, "method": selected_method, "aug_p": aug_p, "aug_min": aug_min, "aug_max": aug_max}
     if selected_method == SPELLING_AUG:
         params["dict_path"] = dict_path
-    if selected_method == RANDOM_AUG or selected_method == REVERSED_AUG:
+    if selected_method == RANDOM_AUG or selected_method == REVERSED_AUG or selected_method == CONTEXTUALWORDEMBS_AUG:
         params["action"] = action
     if selected_method == REVERSED_AUG:
         params["reserved_tokens"] = []
+    if selected_method == CONTEXTUALWORDEMBS_AUG:
+        params["model_path"] = "bert-base-uncased"
+        params["model_type"] = "bert"
     
     # Show button
     submit_button = input_container.button("Tăng cường dữ liệu", on_click=SubmitButtonHandler, kwargs=params)

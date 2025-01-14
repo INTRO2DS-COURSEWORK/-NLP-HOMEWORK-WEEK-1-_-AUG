@@ -20,7 +20,8 @@ def ProcessAugDataframe(df, selected_column, method, **kwargs):
         aug = naw.ReservedAug(**kwargs)
     elif method == SPLIT_AUG:
         aug = naw.SplitAug(**kwargs)
-
+    elif method == CONTEXTUALWORDEMBS_AUG:
+        aug = naw.ContextualWordEmbsAug(**kwargs)
 
     if aug is None:
         return new_df
@@ -32,6 +33,8 @@ def ProcessAugDataframe(df, selected_column, method, **kwargs):
         new_row = aug.augment(new_row)
         #new_row[selected_column] = new_row[selected_column]
         new_df.at[i, selected_column] = new_row[0]
+        
+        
     return new_df
 
 def DataFrameToCSV(dataframe):

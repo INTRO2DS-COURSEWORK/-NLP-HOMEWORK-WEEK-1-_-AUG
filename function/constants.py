@@ -4,8 +4,7 @@ SYNONYM_AUG = "SynonymAug"
 SPELLING_AUG = "SpellingAug"
 REVERSED_AUG = "ReversedAug"
 SPLIT_AUG = "SplitAug"
-
-
+CONTEXTUALWORDEMBS_AUG = "ContextualWordEmbsAug"
 
 METHODS = [
     ANTONYM_AUG,
@@ -13,5 +12,6 @@ METHODS = [
     SPELLING_AUG,
     RANDOM_AUG,
     REVERSED_AUG,
-    SPLIT_AUG
+    SPLIT_AUG,
+    CONTEXTUALWORDEMBS_AUG
 ]
