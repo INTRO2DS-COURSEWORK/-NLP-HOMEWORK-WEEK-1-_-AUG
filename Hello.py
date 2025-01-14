@@ -9,7 +9,7 @@
 # - Trần Công Toản (22110284)
 # - Đồng Gia Sang (22110219)
 
-### LINK VIDEO: 
+### LINK VIDEO: https://drive.google.com/drive/folders/1r0Ltt2y-nIdrAWCOudFWJPWuDdC_OgPU?usp=sharing
 import streamlit as st
 
 st.set_page_config(

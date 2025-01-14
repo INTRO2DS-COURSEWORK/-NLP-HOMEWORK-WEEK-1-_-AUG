@@ -1,5 +1,5 @@
 # BÀI TẬP NHÓM TUẦN 1
-
+### Link video: https://drive.google.com/drive/folders/1r0Ltt2y-nIdrAWCOudFWJPWuDdC_OgPU?usp=sharing
 <!-- CREATE TABLE -->
 
 - Trần Công Toản - MSSV: 22110248

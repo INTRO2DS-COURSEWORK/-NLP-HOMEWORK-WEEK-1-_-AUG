@@ -16,6 +16,11 @@ def ProcessAugDataframe(df, selected_column, method, **kwargs):
         aug = naw.AntonymAug(**kwargs)
     elif method == SPELLING_AUG:
         aug = naw.SpellingAug(**kwargs)
+    elif method == REVERSED_AUG:
+        aug = naw.ReservedAug(**kwargs)
+    elif method == SPLIT_AUG:
+        aug = naw.SplitAug(**kwargs)
+
 
     if aug is None:
         return new_df
@@ -25,7 +30,8 @@ def ProcessAugDataframe(df, selected_column, method, **kwargs):
         new_row = row[selected_column]
         # Apply to the selected column
         new_row = aug.augment(new_row)
-        new_df.at[i, selected_column] = new_row
+        #new_row[selected_column] = new_row[selected_column]
+        new_df.at[i, selected_column] = new_row[0]
     return new_df
 
 def DataFrameToCSV(dataframe):
